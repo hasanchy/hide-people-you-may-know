@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Hide People You May Know",
+    "version": "1.0",
+    "description": "Hides the 'People You May Know' section on Facebook.",
+    "permissions": [
+      "activeTab",
+      "webNavigation"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://*.facebook.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "icons": {
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+}
