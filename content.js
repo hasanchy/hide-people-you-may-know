@@ -1,8 +1,9 @@
 // content.js
 (function() {
     function hidePeopleYouMayKnow() {
-      // Find all <span> elements inside <h3> tags with dir="auto"
-      const elements = document.querySelectorAll('h3[dir="auto"] > span[dir="auto"]');
+      // Find all <span> elements inside <h3> or <h2> tags with dir="auto"
+      const elements = document.querySelectorAll('h3[dir="auto"] > span[dir="auto"], h2[dir="auto"] > span[dir="auto"]');
+      
       elements.forEach(element => {
         // Check if the element's text is "People You May Know"
         if (element.innerText === 'People You May Know') {
